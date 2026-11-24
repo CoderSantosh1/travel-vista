@@ -208,7 +208,7 @@
       "lastNameLabel": "Last Name",
       "lastNamePlaceholder": "ex. Doe",
       "phoneLabel": "Phone Number",
-      "phonePlaceholder": "ex. +1 (212) 555-0199",
+      "phonePlaceholder": "ex. +1 000000",
       "emailLabel": "Email Address",
       "emailPlaceholder": "ex. info@xyz.com",
       "destinationLabel": "Destination",
@@ -232,9 +232,9 @@
     "logoAlt": "TravelVista Tours & Travels",
     "description": "Your trusted travel partner for unforgettable journeys, customized holiday packages, and seamless travel experiences around the world.",
     "contacts": [
-      { "label": "Customer Support", "value": "+1 (212) 555-0199", "href": "tel:+12125550199", "color": "bg-[#f0392e]", "icon": "headset" },
+      { "label": "Customer Support", "value": "+1 000000", "href": "tel:+100000", "color": "bg-[#f0392e]", "icon": "headset" },
       { "label": "Drop Us an Email", "value": "info@xyz.com", "href": "mailto:info@xyz.com", "color": "bg-[#9bc72b]", "icon": "mail" },
-      { "label": "Toll Free", "value": "+1 56569 54698", "href": "tel:+15656954698", "color": "bg-[#12c9b4]", "icon": "chat" }
+      { "label": "Toll Free", "value": "+1 000000", "href": "tel:+1000000", "color": "bg-[#12c9b4]", "icon": "chat" }
     ],
     "navigation": [
       { "label": "Home", "href": "#home" },

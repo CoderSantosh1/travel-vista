@@ -98,8 +98,8 @@ export default function TravelDestinations() {
     >
       <div className="mx-auto grid max-w-[1500px] items-stretch gap-10 px-5 sm:px-10 lg:grid-cols-[0.36fr_1fr] lg:gap-[2.4vw] lg:px-[3vw]">
         {/* Left: heading + controls */}
-        <div className="flex flex-col items-start justify-between gap-10">
-          <div>
+        <div className="contents lg:flex lg:flex-col lg:items-start lg:justify-between lg:gap-10">
+          <div className="order-1 lg:order-none">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#dfeefa] px-4 py-2 text-[13px] font-bold tracking-[0.3px] text-[#0a2f5c] sm:text-[14px]">
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
                 <path d="M12 22s7-6.200 7-12a7 7 0 1 0-14 0c0 5.800 7 12 7 12Zm0-9a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
@@ -116,7 +116,7 @@ export default function TravelDestinations() {
           </div>
 
           {/* Arrows */}
-          <div className="flex items-center gap-4">
+          <div className="order-3 flex items-center justify-center gap-4 lg:order-none lg:justify-start">
             <button
               type="button"
               onClick={prev}
@@ -154,7 +154,7 @@ export default function TravelDestinations() {
         </div>
 
         {/* Right: cards slider */}
-        <div className="min-w-0 overflow-hidden bg-white">
+        <div className="order-2 min-w-0 overflow-hidden bg-white lg:order-none">
           <div
             className="flex h-[340px] transition-transform duration-500 ease-out sm:h-[480px]"
             style={{

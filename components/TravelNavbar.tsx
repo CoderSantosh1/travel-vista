@@ -149,41 +149,40 @@ export default function TravelNavbar() {
       {/* Mobile menu */}
       <div
         id="travel-mobile-menu"
-        className={`grid overflow-hidden bg-black/70 backdrop-blur-md transition-all duration-300 xl:hidden ${
-          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        inert={!open}
+        className={`max-h-0 overflow-x-hidden overflow-y-auto overscroll-contain bg-black/70 backdrop-blur-md transition-[max-height,opacity] duration-300 xl:hidden ${
+          open ? "max-h-[calc(100svh-80px)] opacity-100" : "opacity-0"
         }`}
       >
-        <div className="overflow-hidden">
-          <nav aria-label="Mobile" className="flex flex-col px-5 py-4 sm:px-8">
-            {navLinks.map((link) => {
-              const isActive = active === link.id;
-              return (
-                <Link
-                  key={link.id}
-                  href={link.href}
-                  onClick={() => {
-                    setActive(link.id ?? "home");
-                    setOpen(false);
-                  }}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`border-b border-white/10 py-3 text-[17px] font-medium ${
-                    isActive ? "text-[#f5c518]" : "text-white/90"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+        <nav aria-label="Mobile" className="flex flex-col px-5 py-4 sm:px-8">
+          {navLinks.map((link) => {
+            const isActive = active === link.id;
+            return (
+              <Link
+                key={link.id}
+                href={link.href}
+                onClick={() => {
+                  setActive(link.id ?? "home");
+                  setOpen(false);
+                }}
+                aria-current={isActive ? "page" : undefined}
+                className={`border-b border-white/10 py-3 text-[17px] font-medium ${
+                  isActive ? "text-[#f5c518]" : "text-white/90"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
 
-            <Link
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-[#f5c518] px-6 py-3 text-[17px] font-bold text-[#1a1a1a]"
-            >
-              Book Now
-            </Link>
-          </nav>
-        </div>
+          <Link
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="mt-4 inline-flex items-center justify-center rounded-full bg-[#f5c518] px-6 py-3 text-[17px] font-bold text-[#1a1a1a]"
+          >
+            Book Now
+          </Link>
+        </nav>
       </div>
     </header>
   );

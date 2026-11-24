@@ -1,0 +1,52 @@
+"use client";
+
+import Image from "next/image";
+import { category } from "@/data";
+
+const hero = category.hero;
+
+export default function TravelHero() {
+  return (
+    <section
+      id="home"
+      data-reveal
+      className="relative isolate flex min-h-[700px] items-center overflow-hidden bg-[#0b2a2a] lg:min-h-[calc(100svh-80px)]"
+    >
+      {/* Background image (mountain lake + cabin) */}
+      <Image
+        src={hero.image}
+        alt={hero.imageAlt}
+        fill
+        priority
+        sizes="100vw"
+        className="-z-20 object-cover object-center"
+      />
+
+      {/* Dark overlays for text readability */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/65 via-black/35 to-black/10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/45 via-transparent to-black/25" />
+
+      <div className="hero-content mx-auto mt-24 w-full max-w-[1600px] px-6 py-16 sm:mt-40 sm:px-10 lg:px-[7vw] lg:py-20">
+        <div className="max-w-[760px]">
+          {/* Eyebrow */}
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[13px] font-medium tracking-[1.5px] text-white backdrop-blur-sm sm:text-[14px]">
+            <span className="h-2 w-2 rounded-full bg-[#f5c518]" />
+            {hero.eyebrow}
+          </span>
+
+          {/* Heading */}
+          <h1 className="mt-6 text-[clamp(32px,9vw,54px)] font-extrabold leading-[1.05] tracking-[-0.02em] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.4)] sm:text-[58px]">
+            {hero.title}
+            <span className="block text-[#f5c518]">{hero.highlight}</span>
+            {hero.trailingTitle}
+          </h1>
+
+          {/* Description */}
+          <p className="mt-6 max-w-[560px] text-[16px] leading-[1.7] text-white/90 sm:text-[19px]">
+            {hero.description}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

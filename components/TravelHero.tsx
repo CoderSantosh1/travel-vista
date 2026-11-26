@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { category } from "@/data";
+import { Plane } from "lucide-react";
 
 const hero = category.hero;
 
@@ -29,11 +30,16 @@ export default function TravelHero() {
       <div className="hero-content mx-auto mt-24 w-full max-w-[1600px] px-6 py-16 sm:mt-40 sm:px-10 lg:px-[7vw] lg:py-20">
         <div className="max-w-[760px]">
           {/* Eyebrow */}
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[13px] font-medium tracking-[1.5px] text-white backdrop-blur-sm sm:text-[14px]">
-            <span className="h-2 w-2 rounded-full bg-[#f5c518]" />
+         <span className="inline-flex items-center gap-3 rounded-full border-2 border-[#35E5E5] bg-[#063B3D]/40 px-5 py-2.5 text-[14px] font-semibold tracking-tight text-white backdrop-blur-sm sm:text-[16px]">
+          <Plane
+            className="h-5 w-5 shrink-0"
+            strokeWidth={3}
+            fill="white"
+          />
             {hero.eyebrow}
-          </span>
 
+          
+        </span>
           {/* Heading */}
           <h1 className="mt-6 text-[clamp(32px,9vw,54px)] font-extrabold leading-[1.05] tracking-[-0.02em] text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.4)] sm:text-[58px]">
             {hero.title}

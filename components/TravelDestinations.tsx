@@ -138,7 +138,7 @@ export default function TravelDestinations() {
               type="button"
               onClick={next}
               aria-label="Next destinations"
-              className="grid h-[56px] w-[56px] place-items-center rounded-full bg-[#f2f4f7] hover:bg-[#0a2f5c] text-[#18191a] hover:text-white shadow-[0_8px_18px_rgba(10,47,92,0.35)] transition hover:brightness-125"
+              className="grid h-[56px] w-[56px] place-items-center rounded-full border border-[#b7cfe6] bg-white text-[#0a2f5c] shadow-sm transition hover:bg-[#0a2f5c] hover:text-white"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
                 <path

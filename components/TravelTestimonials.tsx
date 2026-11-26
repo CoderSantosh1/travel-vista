@@ -187,7 +187,7 @@ export default function TravelTestimonials() {
                       type="button"
                       onClick={next}
                       aria-label="Next testimonial"
-                      className="grid h-[42px] w-[42px] place-items-center rounded-full bg-[#ebf4f7] hover:bg-[#0f3d4c] text-[#101111] hover:text-[#ebf4f7] transition hover:brightness-125"
+                      className="grid h-[42px] w-[42px] place-items-center rounded-full border border-[#0f3d4c] bg-white text-[#0f3d4c] transition hover:bg-[#0f3d4c] hover:text-white"
                     >
                       <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none">
                         <path
@@ -208,7 +208,7 @@ export default function TravelTestimonials() {
       </div>
 
       {/* Scroll-to-top button */}
-      <button
+      {/* <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Scroll to top"
@@ -225,7 +225,7 @@ export default function TravelTestimonials() {
             strokeLinejoin="round"
           />
         </svg>
-      </button>
+      </button> */}
     </section>
   );
 }

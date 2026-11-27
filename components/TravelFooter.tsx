@@ -164,26 +164,26 @@ export default function TravelFooter() {
         </p>
 
         {/* Contact row */}
-        <div className="mt-8 flex w-full flex-col items-center gap-6 md:flex-row md:justify-center md:gap-0">
+        <div className="mt-8 grid w-full grid-cols-3 items-start gap-2 md:flex md:flex-row md:items-center md:justify-center md:gap-0">
           {contacts.map((c, index) => (
-            <div key={c.label} className="flex items-center">
+            <div key={c.label} className="flex min-w-0 flex-col items-center md:flex-row">
               {index > 0 && (
                 <span className="mx-[3vw] hidden h-[44px] w-px bg-white/60 md:block" />
               )}
               <a
                 href={c.href}
-                className="flex items-center gap-4 text-left transition-opacity hover:opacity-85"
+                className="flex min-w-0 flex-col items-center gap-2 text-center transition-opacity hover:opacity-85 md:flex-row md:gap-4 md:text-left"
               >
                 <span
-                  className={`grid h-[56px] w-[56px] shrink-0 place-items-center rounded-full text-white shadow-[0_6px_14px_rgba(0,0,0,0.3)] ${c.color}`}
+                  className={`grid h-10 w-10 shrink-0 place-items-center rounded-full text-white shadow-[0_6px_14px_rgba(0,0,0,0.3)] md:h-[56px] md:w-[56px] ${c.color}`}
                 >
                   {c.icon}
                 </span>
-                <span>
-                  <span className="block text-[14px] text-white/90 sm:text-[16px]">
+                <span className="min-w-0">
+                  <span className="block text-[10px] leading-tight text-white/90 sm:text-[16px]">
                     {c.label}
                   </span>
-                  <span className="block text-[18px] font-bold sm:text-[22px]">
+                  <span className="block break-all text-[11px] font-bold leading-tight sm:text-[22px] md:break-normal">
                     {c.value}
                   </span>
                 </span>

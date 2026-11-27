@@ -67,13 +67,13 @@ export default function TravelTestimonials() {
       />
 
       {/* Decorative arc + dot (bottom-right) */}
-      <div
+      {/* <div
         aria-hidden="true"
         className="pointer-events-none absolute bottom-[34px] right-[11%] hidden items-center gap-2 lg:flex"
       >
         <span className="h-[26px] w-[14px] rounded-l-full border-2 border-r-0 border-[#12b5ad]" />
         <span className="h-[18px] w-[18px] rounded-full bg-[#fbbf10]" />
-      </div>
+      </div> */}
 
       <div className="relative mx-auto max-w-[1400px] px-5 sm:px-10">
         {/* Heading */}
